@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 263 70% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 263 20% 96%;
+    --secondary-foreground: 263 70% 20%;
+
+    --muted: 263 10% 96%;
+    --muted-foreground: 263 10% 45%;
+
+    --accent: 263 100% 97%;
+    --accent-foreground: 263 70% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 263 20% 92%;
+    --input: 263 20% 92%;
+    --ring: 263 70% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 263 10% 98%;
+    --sidebar-foreground: 263 30% 25%;
+    --sidebar-primary: 263 70% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 263 20% 95%;
+    --sidebar-accent-foreground: 263 70% 20%;
+    --sidebar-border: 263 20% 90%;
+    --sidebar-ring: 263 70% 60%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 355 100% 97%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+    --info: 199 89% 48%;
+    --info-foreground: 210 20% 98%;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(263 70% 60%) 0%,
+      hsl(232 70% 65%) 100%
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(263 20% 96%) 0%,
+      hsl(263 10% 98%) 100%
+    );
+  }
+
+  .dark {
+    --background: 263 30% 6%;
+    --foreground: 263 10% 95%;
+
+    --card: 263 25% 8%;
+    --card-foreground: 263 10% 95%;
+
+    --popover: 263 25% 8%;
+    --popover-foreground: 263 10% 95%;
+
+    --primary: 263 70% 65%;
+    --primary-foreground: 263 30% 6%;
+
+    --secondary: 263 20% 12%;
+    --secondary-foreground: 263 10% 95%;
+
+    --muted: 263 20% 12%;
+    --muted-foreground: 263 10% 60%;
+
+    --accent: 263 20% 12%;
+    --accent-foreground: 263 10% 95%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 263 10% 95%;
+
+    --border: 263 20% 18%;
+    --input: 263 20% 18%;
+    --ring: 263 70% 65%;
+
+    --sidebar-background: 263 30% 6%;
+    --sidebar-foreground: 263 10% 90%;
+    --sidebar-primary: 263 70% 65%;
+    --sidebar-primary-foreground: 263 30% 6%;
+    --sidebar-accent: 263 20% 12%;
+    --sidebar-accent-foreground: 263 10% 95%;
+    --sidebar-border: 263 20% 18%;
+    --sidebar-ring: 263 70% 65%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 142 10% 95%;
+    --warning: 38 90% 55%;
+    --warning-foreground: 38 10% 95%;
+    --info: 199 85% 55%;
+    --info-foreground: 199 10% 95%;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(263 70% 65%) 0%,
+      hsl(232 70% 70%) 100%
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(263 25% 8%) 0%,
+      hsl(263 20% 12%) 100%
+    );
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
